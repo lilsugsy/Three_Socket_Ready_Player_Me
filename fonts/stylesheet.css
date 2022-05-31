@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Anurati';
+    src: url('Anurati-Regular.woff2') format('woff2'),
+        url('Anurati-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

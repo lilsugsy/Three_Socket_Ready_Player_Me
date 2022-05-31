@@ -1,0 +1,36 @@
+{
+  "name": "socket-test",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1",
+    "three": "^0.140.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "babelify": "^10.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ],
+      "glslify"
+    ]
+  }
+}

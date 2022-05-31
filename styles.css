@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Anurati';
+    src: url('fonts/Anurati-Regular.woff2') format('woff2'),
+        url('fonts/Anurati-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.frame {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+      Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    border: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.5);
+    margin: 10px;
+    z-index: 999;
+  }
+  .warning {
+    background-color: #df68a2;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+  }
+
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    padding: 0px;
+}
+
+.logo {
+    font-family: 'Anurati';
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 10px;
+    /*background: linear-gradient(225.2deg, rgba(19,14,45,0.8) 28.31%, rgba(19,14,45,0.8) 62.97%);*/
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);
+    background: #fff;
+    border: 1px solid rgba(220,215,255, 0.1);
+    width: auto;
+    padding: 6px 10px;
+    border-radius: 100px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.logo--clip {
+    display: block;
+    width: 26px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out; 
+}
+
+.logo:hover .logo--clip {
+  width: 95px;  
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+    position: relative;
+    top: 1px;
+    margin-bottom: -1px;
+}
+
+.buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 7px 9px;
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);
+    background: #fafafa;
+    border: 1px solid rgba(220,215,255, 0.1);  
+    border-radius: 100px;    
+}
+
+.buttons button {
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    background: #eee;  
+    color: #aaa;
+    margin: 0 3px;
+    padding: 8px 0px;
+    width:  35px;
+    height: 35px;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;   
+    box-shadow:  4px 4px 7px #eee,
+             -4px -4px 7px #fff;
+}
+.buttons button.active,
+.buttons button:hover {
+    background: #fff;  
+    color: #000;
+}
+
+.buttons button span{
+  font-size: 20px;
+  line-height: 1em;   
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 48;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;   
+}
+
+
+#users {
+    position: fixed;
+    bottom: 10px;
+    left:10px;
+    color: #fff;
+    z-index:9999;
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);        
+    background: #fff;
+    color: #000;
+    padding: 7px 20px 7px 10px;
+    border-radius: 500px;
+    font-weight: 300;
+    font-size: 12px;
+    z-index: 0;
+}
+#users span {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1em;    
+  margin-right: 7px;
+    color: #000;
+    border-radius: 500px;
+    transition: all 0.2s ease-in-out;   
+    box-shadow:  4px 4px 7px #eee,
+             -4px -4px 7px #fff;
+    background: #eee;
+    padding: 7px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 48;
+}
+
+#numUsers {
+    display: inline-block;
+   line-height: 1.2em;
+    position: relative;
+    top: -6px;
+}
+
+.messages--container {
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    width: 300px;
+    height: calc(100vh - 80px);
+    backdrop-filter: blur(10px);        
+    border-radius: 10px;
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);    
+    background: rgba(255,255,255,0.2);
+    overflow: hidden;
+    border: 1px solid rgba(20,15,0, 1);  
+    border: 1px solid rgba(225,225,255,0.4);
+    pointer-events: none;  
+    opacity: 0;
+    transition: all 0.3s ease-in-out;    
+}
+.messages--container.active {
+    pointer-events: unset;
+    opacity: 1;
+    right: 10px;
+}
+
+.messages--container__header {
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);        
+    background: #fff;
+    padding: 15px 20px;
+}
+
+.messages--container__header h3{
+    color: #000;
+    margin: 0px;
+    font-size: 16px;
+    letter-spacing: -0.6px;  
+}
+
+#input:focus {
+    outline: none;
+}
+
+#form {
+    padding: 8px 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 3.4rem;
+    position: absolute;
+    background: linear-gradient(225.2deg, rgba(12, 17, 17, 0.8) 28.31%, rgba(14, 36, 45, 0.8) 62.97%);        
+    background: rgba(255,255,255,0.1);
+    width:100%;
+    box-sizing: border-box;
+}
+
+#input {
+    border: none;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 5px 0px 0px 5px;
+}
+#input:focus {
+    outline: none;
+}
+#form > button {
+    background: #000;        
+    border: none;
+    padding: 0px 1rem;
+    /*margin: 0px 0.25rem -1px;*/
+    border-radius: 0px 5px 5px 0px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: calc(100% - 100px);
+    overflow: scroll;
+}
+
+#messages > li {
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    color: rgba(255,255,255, 0.9);
+    transition: all 0.1s ease-in-out;      
+}
+#messages > li:nth-child(odd):hover {
+    background: rgba(225,225,255,0.1);   
+}
+
+#messages > li:hover {
+    background: rgba(255,255,255,0.1);   
+}
+
+#messages > li b{ 
+    display: block;
+    margin: 0px 0px 5px;
+    font-weight: normal;
+    font-size: 10px;
+}
+#messages > li p{
+    margin: 0px;
+}
+
