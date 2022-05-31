@@ -7,7 +7,7 @@ Download the files, drag into VS Code. In the root directory run 'npm install' t
 
 Once downloaded, run 'npm run dev'. It will then start a server(via express) which you can see the app via http://localhost:3000/
 
-## INFO
+## Info
 
 The entry point is "server.js". This sets the initial server socket up, as well routing http://localhost:3000/ to the index.html file.
 
